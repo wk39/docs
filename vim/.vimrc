@@ -42,6 +42,10 @@ filetype plugin indent on    " required
 
 
 " settings for wook
+"
+" Get the defaults that most users want.
+source $VIMRUNTIME/defaults.vim
+
 " ref: https://dougblack.io/words/a-good-vimrc.html
 
 let mapleader = ","
@@ -79,6 +83,8 @@ endif
 set lines=64
 set columns=95
 set linespace=0                 " 0 for windows (default 1, while default 0 on linux)
+
+set selection=exclusive         " not to select a character on the cursor in visual mode
 
 set nowrap
 set tw=0                        " 0 for no auto line feed
