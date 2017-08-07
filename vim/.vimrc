@@ -67,16 +67,21 @@ set sessionoptions-=options
 set sessionoptions-=folds
 
 ":put =&guifont"
-"set guifont=Bitstream_Vera_Sans_Mono:h10:cHANGEUL:qDRAFT
-"set guifont=Liberation_Mono:h9:cANSI:qDEFAULT
 "set guifont=D2Coding:h9:w4.9:cANSI:qDRAFT
-set guifont=Consolas:h10:cANSI:qDRAFT
+"set guifont=Consolas:h10:cANSI:qDRAFT
+if has('unix')
+    set guifont=hack\ 10
+else
+    set guifont=hack:h10:cANSI:qDRAFT
+endif
 
 
-set lines=99
+set lines=64
 set columns=95
+set linespace=0                 " 0 for windows (default 1, while default 0 on linux)
 
 set nowrap
+set tw=0                        " 0 for no auto line feed
 
 set tabstop=4
 set expandtab
@@ -184,7 +189,7 @@ let g:syntastic_ignore_files = ['\m\c\.py$']        " ignore python files
 
 
 " VirtualEnv
-let g:virtualenv_directory='~/virtenvs'
+"let g:virtualenv_directory='~/virtenvs'        " no need if $WORKON_HOME defined
 " Airline Theme
 let g:airline_theme='badwolf'
 
