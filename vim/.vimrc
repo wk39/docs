@@ -162,6 +162,28 @@ iab slef self
 iab sefl self
 iab raidus radius
 
+" Ctrl-C V for copy paste
+if has("clipboard")
+    " CTRL-X and SHIFT-Del are Cut
+    vnoremap <C-X> "+x
+    vnoremap <S-Del> "+x
+
+    " CTRL-C and CTRL-Insert are Copy
+    vnoremap <C-C> "+y
+    vnoremap <C-Insert> "+y
+
+    " CTRL-V and SHIFT-Insert are Paste
+    map <C-V>		"+gP
+    map <S-Insert>		"+gP
+
+    cmap <C-V>		<C-R>+
+    cmap <S-Insert>		<C-R>+
+endif
+
+exe 'inoremap <script> <C-V> <C-G>u' . paste#paste_cmd['i']
+exe 'vnoremap <script> <C-V> ' . paste#paste_cmd['v']
+
+
 
 
 " start fullscreen on windows
