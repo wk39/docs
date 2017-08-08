@@ -33,10 +33,10 @@ sudo apt-get install gnome-tweak-tool
 sudo apt-get install python3-pip
 pip3 install virtualenvwrapper
 
-# .bashrc - append below lines
+# (.bashrc - append below lines) --> better in .profile
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/virtenvs
-#export PROJECT_HOME=$HOME/Project-Active
+export WORKON_HOME=$HOME/ve
+export PROJECT_HOME=$HOME/veprj
 source $HOME/.local/bin/virtualenvwrapper.sh
 
 # .profile - add path .local/bin
@@ -49,6 +49,14 @@ mkvirtualenv qt5
 workon qt5
 deactivate
 ```
+* own library (add path)
+```sh
+# add lines in ~/.profile
+if [ -d "$HOME/git/utils_python" ] ; then
+    export PYTHONPATH="$HOME/git/utils_python:$PYTHONPATH"
+fi
+```
+
 
 ## PyQt5
 ```sh
