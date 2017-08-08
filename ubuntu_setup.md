@@ -50,6 +50,12 @@ workon qt5
 deactivate
 ```
 
+## PyQt5
+```sh
+sudo apt-get install pyqt5-dev-tools    # pyuic5
+sudo apt-get install qt4-designer       # qt designer
+```
+
 
 ## Misc
 ### markdown cheatsheet
