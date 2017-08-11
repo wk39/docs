@@ -37,7 +37,7 @@ pip3 install virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/ve
 export PROJECT_HOME=$HOME/veprj
-source $HOME/.local/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper.sh  # .bashrc
 
 # .profile - add path .local/bin
 if [ -d "$HOME/.local/bin" ] ; then
@@ -62,6 +62,21 @@ fi
 ```sh
 sudo apt-get install pyqt5-dev-tools    # pyuic5
 sudo apt-get install qt4-designer       # qt designer
+```
+
+## Remote Desktop
+
+remote desktop for unity (ubuntu default)
+[reference](ubuntuhandbook.org/index.php/2016/07/remote-access-ubuntu-16-04)
+```sh
+# ubuntu menu > desktop shareing >
+#  v 'allow other users to view ...'
+#  v 'allow other users to control ...'
+#  v 'require user to enter this password'
+
+sudo apt-get install dconf-editor
+# run and uncheck 'org/gnome/desktop/remote-access/require-encription'
+# access through tightvnc (ip address only. not with passwd)
 ```
 
 
