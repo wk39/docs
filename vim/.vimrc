@@ -145,6 +145,7 @@ set laststatus=2		" display status line always...
 nmap <A-j> <plug>NERDCommenterTogglej
 nmap ,s :A<CR>
 
+nmap <F2> :cd %:p:h<CR>
 nmap <F4> :NERDTreeToggle<CR>
 nmap <F5> :!python %<CR>
 "nmap <F6> :!start python %<CR>
