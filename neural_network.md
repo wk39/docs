@@ -20,3 +20,16 @@
  | sensitivity, recall, hit rate, or true positive rate (TPR) | TP/P = TP/(TP+FN) | how many ground truth can be found by the algorithm |
  | precision or positive predictive value (PPV) | TP/(TP+FP) | ... |
  | accuracy (ACC) | (TP+TN) / (P+N) = (TP+TN) / (TP+FN + TN+FP) | ... |
+
+
+## Keras
+
+### Tips
+  * consistant result on every training
+      ```python
+      # seed should be fixed
+      import numpy as np
+      np.random.seed(123)
+      from tensorflow import set_random_seed
+      set_random_seed(456)
+      ```
