@@ -79,6 +79,12 @@ sudo apt-get install dconf-editor
 # access through tightvnc (ip address only. not with passwd)
 ```
 
+## Serial Port Permission
+add user to "dialout" group
+[reference](https://groups.google.com/forum/#!topic/openzwave/isRsRcLsiJE)
+```sh
+sudo usermod -a -G dialout yourusername
+```
 
 ## Misc
 ### markdown cheatsheet
