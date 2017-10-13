@@ -83,8 +83,9 @@ sudo apt-get install dconf-editor
 add user to "dialout" group
 [reference](https://groups.google.com/forum/#!topic/openzwave/isRsRcLsiJE)
 ```sh
-sudo usermod -a -G dialout yourusername
+sudo adduser username dialout
 ```
+(effective after re-login)
 
 ## Misc
 ### markdown cheatsheet
