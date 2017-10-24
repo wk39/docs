@@ -10,13 +10,18 @@ or
 *  ReText - from apt-get
 
 ## Keyboard
-
-* capslock to control
-  ```sh
-  sudo apt-get install gnome-tweak-tool
-  # select Typing > Ctrl key position > "Caps Lock as Ctrl"
-  ```
-
+*  capslock to control
+   ```sh
+   sudo apt-get install gnome-tweak-tool
+   # select Typing > Ctrl key position > "Caps Lock as Ctrl"
+   ```
+*  alt-tab behavior
+   ```sh
+   sudo apt-get install compizconfig-settings-manager
+   ```
+   [link](http://juniway.blogspot.kr/2015/12/alt-tab-switch-between-windows-on.html) 
+  
+  
 ## Vim
 ### Ubuntu packages
 *  vim-gtk - from apt-get
