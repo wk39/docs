@@ -79,9 +79,10 @@ else
     set guifont=hack:h10:cANSI:qDRAFT
 endif
 
-
-set lines=64
-set columns=95
+if has("gui_running")
+    set lines=64
+    set columns=95
+endif
 set linespace=0                 " 0 for windows (default 1, while default 0 on linux)
 
 set selection=exclusive         " not to select a character on the cursor in visual mode
