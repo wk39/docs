@@ -10,13 +10,18 @@ or
 *  ReText - from apt-get
 
 ## Keyboard
-
-* capslock to control
-```sh
-sudo apt-get install gnome-tweak-tool
-# select Typing > Ctrl key position > "Caps Lock as Ctrl"
-```
-
+*  capslock to control
+   ```sh
+   sudo apt-get install gnome-tweak-tool
+   # select Typing > Ctrl key position > "Caps Lock as Ctrl"
+   ```
+*  alt-tab behavior
+   ```sh
+   sudo apt-get install compizconfig-settings-manager
+   ```
+   [link](http://juniway.blogspot.kr/2015/12/alt-tab-switch-between-windows-on.html) 
+  
+  
 ## Vim
 ### Ubuntu packages
 *  vim-gtk - from apt-get
@@ -29,33 +34,33 @@ sudo apt-get install gnome-tweak-tool
 
 ## Python and Virtualenv
 * virtualenvwrapper [link](http://chrisstrelioff.ws/sandbox/2014/09/04/virtualenv_and_virtualenvwrapper_on_ubuntu_14_04.html#virtualenvs-on-ubuntu-14-04)
-```sh
-sudo apt-get install python3-pip
-pip3 install virtualenvwrapper
-
-# (.bashrc - append below lines) --> better in .profile
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/ve
-export PROJECT_HOME=$HOME/veprj
-source $HOME/.local/bin/virtualenvwrapper.sh  # .bashrc
-
-# .profile - add path .local/bin
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-# make virtualenv profile and run
-mkvirtualenv qt5
-workon qt5
-deactivate
-```
+  ```sh
+  sudo apt-get install python3-pip
+  pip3 install virtualenvwrapper
+  
+  # (.bashrc - append below lines) --> better in .profile
+  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+  export WORKON_HOME=$HOME/ve
+  export PROJECT_HOME=$HOME/veprj
+  source $HOME/.local/bin/virtualenvwrapper.sh  # .bashrc
+  
+  # .profile - add path .local/bin
+  if [ -d "$HOME/.local/bin" ] ; then
+      PATH="$HOME/.local/bin:$PATH"
+  fi
+  
+  # make virtualenv profile and run
+  mkvirtualenv qt5
+  workon qt5
+  deactivate
+  ```
 * own library (add path)
-```sh
-# add lines in ~/.profile
-if [ -d "$HOME/git/utils_python" ] ; then
-    export PYTHONPATH="$HOME/git/utils_python:$PYTHONPATH"
-fi
-```
+  ```sh
+  # add lines in ~/.profile
+  if [ -d "$HOME/git/utils_python" ] ; then
+      export PYTHONPATH="$HOME/git/utils_python:$PYTHONPATH"
+  fi
+  ```
 
 
 ## PyQt5
@@ -79,6 +84,13 @@ sudo apt-get install dconf-editor
 # access through tightvnc (ip address only. not with passwd)
 ```
 
+## Serial Port Permission
+add user to "dialout" group
+[reference](https://groups.google.com/forum/#!topic/openzwave/isRsRcLsiJE)
+```sh
+sudo adduser username dialout
+```
+(effective after re-login)
 
 ## Misc
 ### markdown cheatsheet
