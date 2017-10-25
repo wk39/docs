@@ -69,6 +69,7 @@ set sessionoptions-=buffers
 set sessionoptions-=globals
 set sessionoptions-=options
 set sessionoptions-=folds
+set sessionoptions+=resize      " restore window size
 
 ":put =&guifont"
 "set guifont=D2Coding:h9:w4.9:cANSI:qDRAFT
@@ -80,8 +81,10 @@ else
 endif
 
 
-set lines=64
-set columns=95
+if has("gui_running")
+    set lines=64
+    set columns=95
+endif
 set linespace=0                 " 0 for windows (default 1, while default 0 on linux)
 
 set selection=exclusive         " not to select a character on the cursor in visual mode
@@ -225,5 +228,16 @@ let g:syntastic_ignore_files = ['\m\c\.py$']        " ignore python files
 let g:airline_theme='badwolf'
 
 
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
 
+set timeout ttimeoutlen=10
+
+
+" ROS launch file
+au BufReadPost *.launch set filetype=xml
 
