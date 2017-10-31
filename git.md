@@ -4,7 +4,7 @@
 1. get key and config
    ```sh
    cd ~/.ssh
-   scp user@myserver.com:.ssh/id_rsa id_rsa_myserver
+   scp -Pxx user@myserver.com:.ssh/id_rsa id_rsa_myserver
    chmod 600 id_rsa_myserver
 
    echo "Host myserver" >> config
