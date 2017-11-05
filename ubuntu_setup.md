@@ -24,7 +24,12 @@ or
   
 ## Vim
 ### Ubuntu packages
-*  vim-gtk - from apt-get
+*  vim-gtk - from ppa (ver.8)
+   ```sh
+   sudo add-apt-repository ppa:jonathonf/vim
+   sudo apt update
+   sudo apt install vim-gtk
+   ```
 *  fonts-hack-ttf - from apt-get
 ### Plugins
 *  Vundle - <https://github.com/VundleVim/Vundle.vim>
