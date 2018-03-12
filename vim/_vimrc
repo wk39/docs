@@ -32,6 +32,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'SirVer/ultisnips'                       " track the engine.
 Plugin 'honza/vim-snippets'                     " snippets are separated from the engine. Add this if you want them:
 Plugin 'kris2k/a.vim'                           " switch source/header
+Plugin 'taketwo/vim-ros'                        " ROS
 " Colors
 Plugin 'zeis/vim-kolor'
 
