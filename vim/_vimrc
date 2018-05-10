@@ -251,6 +251,6 @@ endw
 set timeout ttimeoutlen=10
 
 
-" ROS launch file
-au BufReadPost *.launch set filetype=xml
+au BufReadPost *.launch set filetype=xml         " ROS launch file
+au BufReadPost *.mapcss set filetype=css         " JOSM map css file
 
