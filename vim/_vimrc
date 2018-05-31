@@ -32,7 +32,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'SirVer/ultisnips'                       " track the engine.
 Plugin 'honza/vim-snippets'                     " snippets are separated from the engine. Add this if you want them:
 Plugin 'kris2k/a.vim'                           " switch source/header
-"Plugin 'taketwo/vim-ros'                       " ROS - only support +python2 vim
 " Colors
 Plugin 'zeis/vim-kolor'
 
@@ -83,8 +82,8 @@ endif
 
 
 if has("gui_running")
-    set lines=54
-    set columns=125
+    set lines=64
+    set columns=95
 endif
 set linespace=0                 " 0 for windows (default 1, while default 0 on linux)
 
