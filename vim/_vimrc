@@ -82,8 +82,8 @@ endif
 
 
 if has("gui_running")
-    set lines=64
-    set columns=95
+    set lines=54
+    set columns=125
 endif
 set linespace=0                 " 0 for windows (default 1, while default 0 on linux)
 
@@ -167,6 +167,7 @@ nmap <C-Right> :tabn<CR>
 iab slef self
 iab sefl self
 iab raidus radius
+iab py2header from __future__ import print_function, division<CR><CR>import numpy as np<CR>import matplotlib.pyplot as plt<CR> 
 
 " Ctrl-C V for copy paste
 if has("clipboard")
