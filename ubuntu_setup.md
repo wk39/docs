@@ -97,6 +97,12 @@ sudo adduser username dialout
 ```
 (effective after re-login)
 
+
+## Softlinks...
+```sh
+ln -s ~/msrcs/pcl_examples/visualizer/build/pcl_visualizer ~/.local/bin/pcl_viewer_grid
+```
+
 ## Misc
 ### markdown cheatsheet
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
