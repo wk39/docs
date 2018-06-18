@@ -98,9 +98,13 @@ sudo adduser username dialout
 (effective after re-login)
 
 
-## Softlinks...
+## RAM File System
+ramdisk, ramfs, tmpfs [reference](https://askubuntu.com/questions/152868/how-do-i-make-a-ram-disk)
 ```sh
-ln -s ~/msrcs/pcl_examples/visualizer/build/pcl_visualizer ~/.local/bin/pcl_viewer_grid
+sudo mkdir -p /media/ramfs
+sudo mount -t tmpfs -o size=2G tmpfs /media/ramfs
+# permanent setup
+grep /media/ramfs /etc/mtab | sudo tee -a /etc/fstab
 ```
 
 ## Misc
