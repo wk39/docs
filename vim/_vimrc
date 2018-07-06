@@ -175,7 +175,8 @@ nmap <C-Right> :tabn<CR>
 iab slef self
 iab sefl self
 iab raidus radius
-iab py2header from __future__ import print_function, division<CR><CR>import numpy as np<CR>import matplotlib.pyplot as plt<CR> 
+iab py2header #!/usr/bin/env python <CR># -*- coding: utf-8 -*- <CR><CR>from __future__ import print_function, division <CR><CR>import numpy as np <CR>import matplotlib.pyplot as plt <CR>from mpl_toolkits.mplot3d import Axes3D<CR>
+
 
 " Ctrl-C V for copy paste
 if has("clipboard")
