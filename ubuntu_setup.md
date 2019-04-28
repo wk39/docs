@@ -1,4 +1,4 @@
-# Ubuntu Setup
+# Ubuntu Setup (16.04)
 
 ## Web-browser
 *  chrome - from website
@@ -10,16 +10,33 @@ or
 *  ReText - from apt-get
 
 ## Keyboard
-*  capslock to control
-   ```sh
-   sudo apt-get install gnome-tweak-tool
-   # select Typing > Ctrl key position > "Caps Lock as Ctrl"
-   ```
-*  alt-tab behavior
-   ```sh
-   sudo apt-get install compizconfig-settings-manager
-   ```
-   [link](http://juniway.blogspot.kr/2015/12/alt-tab-switch-between-windows-on.html) 
+* unity
+  * capslock to control
+    ```sh
+    sudo apt-get install gnome-tweak-tool
+    # select Typing > Ctrl key position > "Caps Lock as Ctrl"
+    ```
+  * alt-tab behavior
+    ```sh
+    sudo apt-get install compizconfig-settings-manager
+    ```
+    [link](http://juniway.blogspot.kr/2015/12/alt-tab-switch-between-windows-on.html) 
+
+* general
+
+  [reference](https://www.emacswiki.org/emacs/MovingTheCtrlKey)
+  * capslock to control
+    ```sh
+    # for X
+    vi .xsession
+    # add 
+    # setxkbmap -option "ctrl:nocaps"
+    
+    # for Virtual Consoles
+    sudo vi /etc/default/keyboard
+    # modify
+    # XKBOPTIONS="ctrl:nocaps"
+    ``` 
   
   
 ## Vim
@@ -106,6 +123,18 @@ sudo mount -t tmpfs -o size=2G tmpfs /media/ramfs
 # permanent setup
 grep /media/ramfs /etc/mtab | sudo tee -a /etc/fstab
 ```
+
+## Xubuntu (xfce)
+### install
+```sudo apt install xubuntu-desktop```
+
+### shortcuts
+app > settings > keyboard > application shortcuts
+  * xfce4-screenshooter -r (new): shit+printscreen
+  * xfce4-popup-whiskermenu (modi): super
+  
+
+
 
 ## Misc
 ### markdown cheatsheet
