@@ -133,9 +133,25 @@ app > settings > keyboard > application shortcuts
   * xfce4-screenshooter -r (new): shit+printscreen
   * xfce4-popup-whiskermenu (modi): super
   
-
-
+### touchpad toggle
+[reference](https://askubuntu.com/questions/537002/how-to-quickly-enable-disable-touchpad-in-xubuntu-14-04-without-installing-other)
+```
+#!/bin/bash
+if synclient | grep --quiet 'TouchpadOff             = 0'; then
+  synclient TouchpadOff=1
+  notify-send Touchpad Disabled
+else
+  synclient TouchpadOff=0
+  notify-send Touchpad Enabled
+fi
+```
 
 ## Misc
+
+### Korean input setup
+use ibus-hangul or fcitx ...
+
+###
+
 ### markdown cheatsheet
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
