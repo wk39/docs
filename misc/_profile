@@ -35,13 +35,19 @@ export PROJECT_HOME=$HOME/veprj
 #source $HOME/.local/bin/virtualenvwrapper.sh
 
 
-if [ -d "$HOME/work/utils_python" ] ; then
-    export PYTHONPATH="$HOME/work/utils_python:$PYTHONPATH"
-    export PYTHONPATH="$HOME/work/msrcs:$PYTHONPATH"
-fi
+#if [ -d "$HOME/work/utils_python" ] ; then
+#    #export PYTHONPATH="$HOME/work/utils_python:$PYTHONPATH"
+#    export PYTHONPATH="$HOME/work/msrcs:$PYTHONPATH"
+#fi
 
 if [ -d "$HOME/msrcs/pcl_examples/build" ] ; then
     PATH="$HOME/msrcs/pcl_examples/build:$PATH"
 fi
 
+if [ -d "$HOME/ad_sim/mapping" ] ; then
+    PATH="$HOME/ad_sim/mapping:$PATH"
+fi
+
+# ignore CTRL-D for exit terminal
+set -o ignoreeof
 

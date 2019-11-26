@@ -82,7 +82,7 @@ endif
 
 
 if has("gui_running")
-    set lines=64
+    set lines=52
     set columns=95
 endif
 set linespace=0                 " 0 for windows (default 1, while default 0 on linux)
@@ -151,6 +151,7 @@ nmap ,s :A<CR>
 nmap <F2> :cd %:p:h<CR>
 nmap <F4> :NERDTreeToggle<CR>
 nmap <F5> :!python %<CR>
+nmap <F6> :!python3 %<CR>
 "nmap <F6> :!start python %<CR>
 nmap <F8> :TagbarToggle<CR>
 
@@ -174,9 +175,11 @@ nmap <C-Right> :tabn<CR>
 " spelling correction for common mistake
 iab slef self
 iab sefl self
+iab signle single
 iab raidus radius
+iab NOne None
 iab py2header #!/usr/bin/env python <CR># -*- coding: utf-8 -*- <CR><CR>from __future__ import print_function, division <CR><CR>import numpy as np <CR>import matplotlib.pyplot as plt <CR>from mpl_toolkits.mplot3d import Axes3D<CR>
-
+iab mplshow ''' show and close all together '''<CR> for i in plt.get_fignums():<CR> plt.figure(i).canvas.mpl_connect('close_event', lambda event: plt.close('all') )<CR>plt.show()
 
 " Ctrl-C V for copy paste
 if has("clipboard")
